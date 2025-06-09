@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Grid</title>
+  <style>
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 kolom */
+      gap: 10px;
+      padding: 10px;
+    }
+
+    .grid-item {
+      background-color: violet; /* Violet untuk desktop */
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    /* Responsive untuk layar kecil */
+    @media only screen and (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr; 
+      }
+      .grid-item {
+        background-color: teal; /* Teal untuk mobile */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="grid-item">pilihan Jake</div>
+    <div class="grid-item">pilihan Jay</div>
+    <div class="grid-item">pilihan Sunghoon</div>
+  </div>
+
+</body>
+</html>
